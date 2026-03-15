@@ -1,5 +1,12 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
+
+/* Urdu Font Support */
+@font-face {
+  font-family: 'Urdu';
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
+}
 
 @custom-variant dark (&:is(.dark *));
 
@@ -116,9 +123,16 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    font-family: 'Noto Naskh Arabic', 'Urdu', sans-serif;
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Noto Naskh Arabic', 'Urdu', sans-serif;
+    direction: rtl;
+  }
+  input, textarea, select {
+    direction: rtl;
+    text-align: right;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
